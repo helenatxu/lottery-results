@@ -801,14 +801,21 @@ footer .footer-manu ul li a:hover {
 /*---------------------------------------------
           Results Table 
 -----------------------------------------------*/
+
+/*--------- Bonoloto Results Table ------------*/
+.results-table table thead tr {
+    color: #FFF;
+    background: #172842;
+}
+
 /*--------- Bonoloto Balls------------*/
 
 /* STYLES */
 .balls{margin-bottom:40px}
-.balls .ball,.balls .bonus{border-radius:65px;box-shadow:0 -5px 10px 0 rgba(0,0,0,0.5) inset;-webkikt-box-shadow:0 -10px 25px 0 rgba(0,0,0,0.5) inset;display:inline-block;font:1.125em/40px Oswald,sans-serif;height:40px;letter-spacing:-1px;position:relative;text-align:center;top:0;width:40px;background:url(/images/skin/icon-sprite.png)no-repeat 54.466% 0;background-size:500px 1500px;padding:0;margin-bottom:0;color:#fff;}
+.balls .ball,.balls .bonus{border-radius:65px;box-shadow:0 -5px 10px 0 rgba(0,0,0,0.5) inset;-webkikt-box-shadow:0 -10px 25px 0 rgba(0,0,0,0.5) inset;display:inline-block;font:1.125em/40px Oswald,sans-serif;height:40px;letter-spacing:-1px;position:relative;text-align:center;top:0;width:40px;padding:0;margin-bottom:0;color:#fff;}
 .super-10 .balls .ball{margin-bottom:10px}
 .balls li:before{background:none}
-.balls .ball:after,.balls .euro:after,.balls .bonus:after{content:"";display:block;height:11px;position:absolute;bottom:-4px;width:40px;background:url(/images/skin/icon-sprite.png)no-repeat 54.526% 6.68%;background-size:500px 1500px}
+.balls .ball:after,.balls .euro:after,.balls .bonus:after{content:"";display:block;height:11px;position:absolute;bottom:-4px;width:40px;}
 .balls .bonus{background-position:54.466% 3.425%;color:#293444}
 .balls .bonus:before{width:40px;height:20px;font:11px/18px Oswald;color:#293444;letter-spacing:0;text-shadow:none;top:42px;line-height:12px}
 .balls.big .bonus:before{top:56px;width:50px}
@@ -817,7 +824,7 @@ footer .footer-manu ul li a:hover {
 .balls li.result {display: inline-block; background: #333; border-radius: 5px; color: #FFF; padding: 5px; margin: 0; min-width: 25px;}
 .balls li.result.last {min-width: 50px;}
 
-ul li:before{content:"";width:26px;height:26px; background:url(/images/skin/icon-sprite.png) no-repeat 10.493% 9.346%;background-size:500px 1500px;position:absolute;top:5px;left:0px}
+ul li:before{content:"";width:26px;height:26px; position:absolute;top:5px;left:0px}
 
 /* BONOLOTO */
 .bonoloto .balls .ball{
