@@ -54,34 +54,30 @@ a:active {
   color: #666;
 }
 
-/*Header Start */
+/* Nav bar Start */
 
-header {
-  background: #fff;
-  padding: 20px 0;
-}
-header .navbar {
+.navbar {
+  /*background: #2e9c28;*/
+  background: rgba(0, 0, 0, 0.79);
+  color: #fff;
   margin-bottom: 0px;
   border: 0px;
+  /*width: 100%;*/
 }
-header .navbar-brand {
-  padding-top: 5px;
+
+.navbar .nav li a {
+    font-weight: 600;
+    font-size: 18px;
+    color: #fff;
 }
-header .navbar-default {
-  background: none;
-  border: 0px;
+
+.navbar-default .navbar-nav li a:hover {
+  color: #eaeed8;
 }
-header .navbar-default .navbar-nav {
-  padding-top: 10px;
+
+nav.navbar-static-top {
 }
-header .navbar-default .navbar-nav li a {
-  color: #333333;
-  padding: 10px 26px;
-  font-size: 15px;
-}
-font header .navbar-default .navbar-nav li a:hover {
-  color: #000;
-}
+
 /*---------------------------------------------*/
 /*Index Start */
 
@@ -160,7 +156,8 @@ font header .navbar-default .navbar-nav li a:hover {
 /*footer Start */
 
 footer {
-  background: #F5F5F5;
+  background: rgba(14, 11, 11, 0.86);
+  /*background: #F5F5F5;*/
   text-align: center;
   padding-top: 48px;
   padding-bottom: 55px;
@@ -186,7 +183,7 @@ footer .footer-manu ul li {
 }
 footer .footer-manu ul li a {
   display: inline-block;
-  color: #494949;
+  color: #9d9d9d;
 }
 footer .footer-manu ul li a:hover {
   color: #000;
@@ -297,4 +294,9 @@ ul li:before{
 
 .bonoloto .balls .bonus.reintegro:before{
   content:"Reintegro"
+}
+
+/* Condiciones Legales */
+.legal-text h3 {
+    font-weight: 500;
 }
