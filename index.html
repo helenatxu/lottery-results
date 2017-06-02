@@ -18,9 +18,10 @@
     
     <!-- Js -->
     <script src="js/vendor/modernizr-2.6.2.min.js"></script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js" ></script>
     <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.10.2.min.js"><\/script>')</script>
     <script src="js/bootstrap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.8.4/moment.min.js"></script>
     <script src="js/plugins.js"></script>
 
     <script src="js/main.js"></script>
@@ -36,74 +37,6 @@
         ga('send', 'pageview');
 
     </script>
-
-
-    <script src="https://code.jquery.com/jquery-2.2.4.min.js" ></script>
-    <script>
-        var rssUrl = "http://www.loteriasyapuestas.es/es/bonoloto/resultados/.formatoRSS";
-        function parseRSS(url, callback) {
-            $.ajax({
-                url: 'https://api.rss2json.com/v1/api.json?rss_url=' + encodeURIComponent(url),
-                dataType: 'json',
-                success: function(data) {
-                    callback(data);
-                    console.log("json",data);
-                }
-            });
-        }
-        html = "";
-
-        parseRSS(rssUrl, function(rss) {
-            var items = rss.items;
-            for(i = items.length-1; i >=0; i--) {
-                html += "<p><a href='" + items[i].link + "'>" + items[i].title + "</a></p>";  
-            }
-            $("div#target").html(html);
-            console.log(rssUrl, rss);
-
-
-            var _string = rss.items[0].content;
-
-
-            var result = _string.match(/<b>(.*?)<\/b>/g).map(function(val){
-                return val.replace(/<\/?b>/g,'');
-            });
-
-            var result_final = result;
-            result_final[0] = result[0].match(/\d+/g).map(function(val){
-                return val.replace(/\-/g,'');
-            });
-
-
-
-            result_final[1] = result[1].replace(/[CR]\(+\)/g,'').match(/\d+/g,'');
-            result_final[2] = result[2].replace(/[CR]\(+\)/g,'').match(/\d+/g,'');
-
-
-            console.log("result_final", result_final);
-
-
-            var html2 = "<td style='text-align: center; white-space: nowrap;' class='bonoloto'><ul class='balls'>";
-
-            var items2 = result_final;
-
-
-            for(i = items2[0].length-1; i >=0; i--) {
-                console.log("html2", html2);
-                html2 += "<li class='ball'>" + items2[0][i] + "</li>";  
-            }
-
-            html2 += "<li class='bonus-ball bonus'>" + items2[1] + "</li>";
-            html2 += "<li class='reintegro bonus'>" + items2[2] + "</li>";
-            html2 += "</ul></td>";
-
-
-            $("div#target").html(html2);
-            console.log("html2", html2);
-
-        });
-    </script>
-
 
 </head>
 <body>
@@ -127,20 +60,6 @@
                 <ul class="nav navbar-nav">
                     <li><a href="#">Sorteo Bonoloto</a></li>
                     <li><a href="aviso-legal-sorteo-bonoloto.html">Aviso Legal</a></li>
-                    <!-- <li><a href="#">Contacto</a></li>
-                    <li class="dropdown">
-
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sorteos Diarios<span class="caret"></span></a>
-                        <ul class="dropdown-menu">
-                            <li><a href="/bonoloto-lunes.php" title="Bonoloto del Lunes">Bonoloto del Lunes</a></li>
-                            <li><a href="/bonoloto-martes.php" title="Bonoloto del Martes">Bonoloto del Martes</a></li>
-                            <li><a href="/bonoloto-miercoles.php" title="Bonoloto del Miércoles">Bonoloto del Miércoles</a></li>
-                            <li><a href="/bonoloto-jueves.php" title="Bonoloto del Jueves">Bonoloto del Jueves</a></li>
-                            <li><a href="/bonoloto-viernes.php" title="Bonoloto del Viernes">Bonoloto del Viernes</a></li>
-                            <li><a href="/bonoloto-sabado.php" title="Bonoloto del Sábado">Bonoloto del Sábado</a></li>
-                            <li><a href="/preguntas.php" title="Preguntas relacionadas con la Bonoloto">Preguntas Bonoloto</a></li>
-                        </ul>
-                    </li> -->
                 </ul>
             </div>  <!-- /.navbar-collapse -->
 
@@ -181,7 +100,7 @@
                                 <th>Bote Acumulado</th>
                             </tr>
                         </thead>
-                        <tbody>
+                        <tbody id="rss-results">
                             <tr>
                                 <td style="text-align: center;">
                                     <a href="#" title="Revisa el desglose de premios y detalles del sorteo" class="smallerHeading">
