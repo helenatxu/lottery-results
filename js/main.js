@@ -45,8 +45,8 @@ $(document).ready(function(){
                     else previousDate = result_final[i][3];
 
 
-                htmlResultTable +="<tr><td style='text-align: center;'>"+result_final[i][3]+"</td>";
-                htmlResultTable += "<td style='text-align: center; white-space: nowrap;' class='bonoloto'><ul class='balls'>";
+                htmlResultTable +="<tr><td>"+result_final[i][3]+"</td>";
+                htmlResultTable += "<td class='bonoloto'><ul class='balls'>";
 
                 var dayResults = result_final[i];
 
@@ -58,7 +58,7 @@ $(document).ready(function(){
                 htmlResultTable += "<li class='bonus-ball bonus'>" + dayResults[1] + "</li>";
                 htmlResultTable += "<li class='reintegro bonus'>" + dayResults[2] + "</li>";
                 htmlResultTable += "</ul></td>";
-                // htmlResultTable +="<td style='text-align: center;'></td></tr>";
+                // htmlResultTable +="<td></td></tr>";
                 htmlResultTable +="</tr>";
 
 
