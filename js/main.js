@@ -18,10 +18,10 @@ $(document).ready(function(){
 
     parseRSS(rssUrl, function(rss) {
 
-        // var results = rss.items;
-        for(i = rss.items.length-1; i >=0; i--) {
+        var allResults = rss.items.reverse();
+        for(i = allResults.length-1; i >=0; i--) {
 
-                var _rawResults = rss.items[i].content;
+                var _rawResults = allResults[i].content;
 
                 var result = _rawResults.match(/<b>(.*?)<\/b>/g).map(function(val){
                     return val.replace(/<\/?b>/g,'');
@@ -31,9 +31,10 @@ $(document).ready(function(){
                 result_final[i][0] = result[0].match(/\d+/g).map(function(val){
                     return val.replace(/\-/g,'');
                 });
+                
+                result_final[i][0].reverse();
 
-
-                var resultsDate = new Date(rss.items[i].pubDate);
+                var resultsDate = new Date(allResults[i].pubDate);
                 
 
                 result_final[i][1] = result[1].replace(/[CR]\(+\)/g,'').match(/\d+/g,'');
