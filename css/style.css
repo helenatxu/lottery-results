@@ -71,7 +71,7 @@ a:active {
   text-align: center;
 }
 .section-title h2 {
-  /*text-transform: uppercase;*/
+  color: #8c7a6a;
   font-family: "Stag Web","Open Sans","Helvetica Neue",Helvetica,Arial,sans-serif;
   font-size: 28px;
   font-weight: 600;
@@ -138,18 +138,14 @@ a:active {
   letter-spacing: 1px;
   padding-bottom: 14px;
   margin-top: 0;
-  /*text-transform: capitalize;*/
 }
 #global-header .block p {
+  color: #666;
   font-size: 24px;
   font-weight: 800;
   letter-spacing: 0px;
   word-spacing: 0px;
 }
-
-
-/*Work Close */
-
 
 /*--------- Heading------------*/
 .heading {
