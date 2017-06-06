@@ -213,6 +213,12 @@ footer .footer-menu ul li a:hover {
     white-space: pre-line;
   }
 
+  @media (max-width: 700px) {
+    .results-table table thead tr {
+      font-size: 17px;
+    }
+  }
+
   .results-table .table-bordered>tbody>tr>td {
     border: none;
     text-align: left;
@@ -235,8 +241,12 @@ footer .footer-menu ul li a:hover {
     margin-bottom:40px
   }
   .balls .ball,.balls .bonus{
-    border-radius:65px;
-    box-shadow:0 -5px 10px 0 rgba(0,0,0,0.5) inset;-webkikt-box-shadow:0 -10px 25px 0 rgba(0,0,0,0.5) inset;display:inline-block;
+    border-radius: 65px;
+    box-shadow:0 -5px 10px 0 rgba(0, 0, 0, 0.42) inset;
+    -webkikt-box-shadow:0 -5px 10px 0 rgba(0, 0, 0, 0.42) inset;
+    /*box-shadow:0 -5px 10px 0 rgba(0,0,0,0.5) inset;*/
+    /*-webkikt-box-shadow:0 -10px 25px 0 rgba(0,0,0,0.5) inset;*/
+    display:inline-block;
     font:1.125em/40px Oswald,sans-serif;height:40px;
     letter-spacing:-1px;position:relative;text-align:center;
     top:0;width:40px;padding:0;margin-bottom:0;color:#fff;
