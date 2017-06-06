@@ -48,7 +48,7 @@ $(document).ready(function(){
                     else previousDate = result_final[i][3][1];
 
 
-                htmlResultTable +="<tr><td><span class='weekDay'>"+result_final[i][3][0]+"</span><span class='monthDay'> "+result_final[i][3][1]+"</span></td>";
+                htmlResultTable +="<tr><td><span class='weekDay'>"+result_final[i][3][0]+"</span><br><span class='monthDay'> "+result_final[i][3][1]+"</span></td>";
                 htmlResultTable += "<td class='bonoloto'><ul class='balls'>";
 
                 var dayResults = result_final[i];
