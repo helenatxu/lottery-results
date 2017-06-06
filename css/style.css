@@ -68,7 +68,7 @@ a:active {
 }
 .section-title {
   margin-bottom: 70px;
-  text-align: left;
+  text-align: center;
 }
 .section-title h2 {
   /*text-transform: uppercase;*/
@@ -84,27 +84,16 @@ a:active {
 
 /* Nav bar Start */
 
-.navbar {
-  /*background: #2e9c28;*/
-  background: rgba(0, 0, 0, 0.79);
-  color: #fff;
-  margin-bottom: 0px;
-  border: 0px;
-  /*width: 100%;*/
-}
-
-.navbar .nav li a {
+.navbar a.nav-link {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
 }
 
-.navbar-default .navbar-nav li a:hover {
-  color: #eaeed8;
+.navbar .navbar-brand {
+  padding: 0px 15px;
 }
 
-nav.navbar-static-top {
-}
 
 /*---------------------------------------------*/
 /*Index Start */
@@ -139,7 +128,6 @@ nav.navbar-static-top {
 #global-header .block {
   color: #FFF;
   margin: 0 auto;
-  padding-left: 90px;
   text-align: center;
 }
 #global-header .block h1 {
@@ -187,6 +175,7 @@ nav.navbar-static-top {
 footer {
   background: rgba(14, 11, 11, 0.86);
   /*background: #F5F5F5;*/
+  margin-top: 40px;
   text-align: center;
   padding-top: 48px;
   padding-bottom: 55px;
@@ -199,22 +188,22 @@ footer p {
 footer a {
   color: #595959;
 }
-footer .footer-manu {
+footer .footer-menu {
   padding-bottom: 25px;
 }
-footer .footer-manu ul {
+footer .footer-menu ul {
   margin: 0px;
   padding: 0px;
 }
-footer .footer-manu ul li {
+footer .footer-menu ul li {
   display: inline-block;
   padding: 0px 20px;
 }
-footer .footer-manu ul li a {
+footer .footer-menu ul li a {
   display: inline-block;
   color: #9d9d9d;
 }
-footer .footer-manu ul li a:hover {
+footer .footer-menu ul li a:hover {
   color: #000;
 }
 
@@ -229,13 +218,19 @@ footer .footer-manu ul li a:hover {
     font-size: 20px;
   }
 
-  .table-bordered>tbody>tr>td {
+  .results-table .table-bordered>tbody>tr>td {
     border: none;
     text-align: left;
+    white-space: pre-wrap;
   }
 
   .bonoloto {
     white-space: nowrap;
+  }
+
+  span.monthDay {
+    white-space: nowrap;
+    text-transform: capitalize;
   }
 
   /*--------- Bonoloto Balls------------*/

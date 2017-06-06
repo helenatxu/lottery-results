@@ -38,14 +38,16 @@ $(document).ready(function(){
 
                 result_final[i][1] = result[1].replace(/[CR]\(+\)/g,'').match(/\d+/g,'');
                 result_final[i][2] = result[2].replace(/[CR]\(+\)/g,'').match(/\d+/g,'');
-                result_final[i][3] = moment(resultsDate).format('dddd D-MMMM-YYYY');
+                result_final[i][3] = new Array();
+                result_final[i][3][0] = moment(resultsDate).format('dddd');
+                result_final[i][3][1] = moment(resultsDate).format('D-MMMM-YYYY');
 
 
-                if (result_final[i][3] === previousDate) continue;
-                    else previousDate = result_final[i][3];
+                if (result_final[i][3][1] === previousDate) continue;
+                    else previousDate = result_final[i][3][1];
 
 
-                htmlResultTable +="<tr><td>"+result_final[i][3]+"</td>";
+                htmlResultTable +="<tr><td><span class='weekDay'>"+result_final[i][3][0]+"</span><span class='monthDay'> "+result_final[i][3][1]+"</span></td>";
                 htmlResultTable += "<td class='bonoloto'><ul class='balls'>";
 
                 var dayResults = result_final[i];
